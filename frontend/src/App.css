@@ -1,0 +1,106 @@
+/* App Layout */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Header */
+.app h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 180px;
+  transition: border-color 0.2s;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Table */
+.log-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.log-table th {
+  text-align: left;
+  padding: 12px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+}
+
+.log-table td {
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+/* Level Badge */
+.log-row td:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.log-row.error td:first-child {
+  color: #d9534f;
+}
+.log-row.warn td:first-child {
+  color: #f0ad4e;
+}
+.log-row.info td:first-child {
+  color: #5bc0de;
+}
+.log-row.debug td:first-child {
+  color: #5cb85c;
+}
+
+/* Row Color */
+.log-row.error { background-color: #fff5f5; }
+.log-row.warn { background-color: #fffef5; }
+.log-row.info { background-color: #f5faff; }
+.log-row.debug { background-color: #f5f5f5; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+  }
+
+  .log-table {
+    font-size: 12px;
+  }
+}
